@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="theme-color" content="#">
+	<title>Currency converter</title>
+	<link rel="shortcut icon" type="image/x-icon" href="img/money.png" sizes="192x192">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+</head>
+<body class="mt-5 font-family-base">
+<div class="container-fluid col-sm-6 col-sm-offset-3 hidden bg-light p-16" >
+		<h3 class="text-center text-secondary text-uppercase">Currency convertor</h3>
+	<hr/>
+	<div class="alert alert-info " role="alert">
+		<p class="text-center"><b>Latest exchange rates <span class="date"></span></b></p>
+		<span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span> <span class="exchangeRateEurGbp"></span>
+		<br>
+		<span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span> <span class="exchangeRateEurUsd"></span>
+		<br>
+		<span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span> <span class="exchangeRateUsdEur"></span>
+		<br>
+		<span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span> <span class="exchangeRateUsdGbp"></span>
+		<br>
+		<span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span> <span class="exchangeRateGbpEur"></span>
+		<br>
+		<span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span> <span class="exchangeRateGbpUsd"></span>
+	</div>
+   <h6 class="text-center">Calculate exchange rates</h6>
+	<div class="row ">
+		<div class="col-md-4 ">
+			<input id="amount" class="form-control input-lg" type="number" step="0.01" placeholder="Amount" autofocus required="" />
+		</div>
+		<div class="col-md-4">
+			<select id="from"  class="custom-select input-lg">
+				<option value="">From</option>
+				<option value="EUR" >&euro;EUR </option>
+				<option value="USD" >&dollar;USD</option>
+				<option value="GBP" >&pound;GBP</option>
+			</select>
+		</div>
+		<div class="col-md-4">
+			<select id="to" class="custom-select input-lg">
+				<option value="">To</option>
+				<option value="EUR" >&euro;EUR </option>
+				<option value="USD" >&dollar;USD</option>
+				<option value="GBP" >&pound;GBP</option>
+			</select>
+		</div>
+	</div>
+	<table class="table ">
+		<caption id="exchangeRate"></caption>
+		<thead>
+		<tr><th id="as">FROM</th><th id="into">TO</th></tr>
+		</thead>
+		<tbody>
+		<tr>
+			<td id="fromAmountFormatted">0.00</td>
+			<td id="toAmountFormatted">0.00</td>
+		</tr>
+
+		</tbody>
+	</table>
+	<hr />
+	<p class="font-weight-light text-center" >Vera Onunda -177779IVSB</p>
+</div>
+<!---------------scripts-jquery---------------------------->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/numeral.js/2.0.6/numeral.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<!-- -------------scripts-bootstrap---------------------------->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<!---------------scripts-customized---------------------------->
+<script type="text/javascript"  src="js/main.js"></script>
+</body>
+</html>
